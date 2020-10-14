@@ -28,6 +28,11 @@
           "type": "shell",
           "inline": ["sudo git clone https://github.com/jimmy-saya/DevOps_Learning.git","cd ~/DevOps_Learning"]
         }
+
+        {
+          "type": "shell",
+          "inline": ["sudo docker pull node:latest", "sudo docker build -t jimmy/node-web-app -f ~/DevOps_Learning/dev/Dockerfile .", "sudo docker run -d --name node-web-app-c -p 80:8080 -v node-web-volume:/usr/src/app jimmy/node-web-app"]
+        }
     ]
   }
   
