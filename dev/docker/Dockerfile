@@ -2,7 +2,7 @@ FROM node:latest
 
 WORKDIR /usr/src/app
 
-COPY ~/DevOps_Learning/dev/nodejs_project .
+COPY nodejs_project .
 
 RUN npm install
 
