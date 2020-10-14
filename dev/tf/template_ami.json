@@ -4,6 +4,8 @@
         "type": "amazon-ebs",
         "profile": "terraform-user",
         "region": "eu-west-1",
+        "security_group_id":"sg-0215c56d4e9183d0e",
+        "ssh_keypair_name":"ubuntu_desktop",
         "source_ami_filter": {
           "filters": {
             "virtualization-type": "hvm",
