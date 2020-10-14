@@ -27,7 +27,7 @@
         {
           "type": "shell",
           "inline": ["sudo git clone https://github.com/jimmy-saya/DevOps_Learning.git","cd ~/DevOps_Learning"]
-        }
+        },
 
         {
           "type": "shell",
