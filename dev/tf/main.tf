@@ -14,7 +14,7 @@ provider "aws" {
 
 resource "aws_instance" "nodejs" {
     #ami                     = "ami-06fd8a495a537da8b"
-    ami                     = "ami-0bce4e4fa191ff9a0"
+    ami                     = "ami-0f5b11915630c7f4e"
     instance_type           = "t2.micro"
     security_groups         = [aws_security_group.allow_http_from_alb.name]
     key_name                = "ubuntu_desktop"
