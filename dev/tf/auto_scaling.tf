@@ -16,8 +16,9 @@ resource "aws_launch_template" "First_LT" {
 
 resource "aws_autoscaling_group" "First_AG" {
     name                            = "First_AG"
+    enabled_metrics                 = ["GroupInServiceInstances"]
     availability_zones              = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
-    #desired_capacity                = 1
+    desired_capacity                = 1
     min_size                        = 1
     max_size                        = 5
     health_check_grace_period       = 300
@@ -33,7 +34,7 @@ resource "aws_autoscaling_group" "First_AG" {
 resource "aws_autoscaling_policy" "Scaling_Policy" {
   name                      = "Scaling_Policy"
   adjustment_type           = "ChangeInCapacity"
-  scaling_adjustment        = 2
+  scaling_adjustment        = 1
   #estimated_instance_warmup = 60
   autoscaling_group_name    = aws_autoscaling_group.First_AG.name
 }
